@@ -2,7 +2,7 @@ class Config(object):
     APP_ID = "17441778"
     API_HASH = "d221a3858d847abbec41da95840b4a64"
     BOT_TOKEN = "5860521663:AAHVRoQR8Twwa6ISH5MhYEZG8qle2UOzF3w"
-    AUTH_USERS = set(int(x) for x in "1143358497".split(" "))
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1143358497").split())
     IS_PUBLIC_BOT = False # Set this to True if you want to make your bot public
     LOGS_CHANNEL = YOUR_LOG_CHANNEL_ID
     # DON'T CHANGE THESE 2 VARS
